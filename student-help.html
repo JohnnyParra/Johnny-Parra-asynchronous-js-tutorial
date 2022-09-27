@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="display">
+
+  </div>
+</body>
+
+<script>
+  baseUrl = 'https://opentdb.com/api.php?amount=10';
+  const getApi = async() =>{
+    const response = await fetch(`${baseUrl}`);
+    var data = await response.json();
+
+   document.querySelector('.display').innerHTML = data.results[0].category;
+    console.log(data);
+  }
+
+  getApi();
+
+</script>
+</html>

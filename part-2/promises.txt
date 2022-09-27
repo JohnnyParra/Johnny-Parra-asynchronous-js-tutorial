@@ -1,0 +1,2 @@
+A promise is an object returned by an asynchronous function, which represents
+the current state of the operation.

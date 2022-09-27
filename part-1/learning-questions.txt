@@ -1,0 +1,11 @@
+What is the primary difference between synchronous and asynchronous 
+programming in JavaScript?
+synchronous runs code in a sequence where as asynchronous runs code in parallel.
+asynchronous can run an operation while another one is still being processed.
+
+Why is this useful?
+It does not freeze the program when waiting for a long action to finish.
+
+What problems does it solve?
+stops the program from stopping when waiting for a request to finish. The program can 
+do other things and still allow user interaction.

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaining Promises</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+  // fetchPromise.then((response) => {
+  //   const responseJson = response.json();
+  //   responseJson.then((data) => {
+  //     console.log(data[0].name);
+  //   })
+  // });
+
+  // // same as above but written better
+  // fetchPromise
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     console.log(data[0].name)
+  //   });
+  
+  // checks that data was returned before trying to read it
+  fetchPromise
+    .then((response) => {
+      if(!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data[0].name);
+    });
+
+</script>
+</html>

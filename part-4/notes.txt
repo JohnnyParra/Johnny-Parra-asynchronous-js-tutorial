@@ -1,0 +1,27 @@
+Thread - execution of running multiple tasks or programs at the same 
+time. Each unit capable of executing code is called a thread. 
+
+main thread - the one used by the browser to handle user events,
+render display, and run majority of the code for a typical web page.
+
+if all tasks run on the main thread then a complicated script can 
+slow down the entire website.
+
+to get around this we use additional threads to execute independently
+while still communication between one another.
+
+this is done with web workers to spin off a sub-program which runs
+concurrently with the main thread in a thread of its own. 
+
+this allows slow complex or long-running tasks to be executed 
+independently of the main thread to take advantage of modern 
+multi-core processors. 
+
+dedicated worker - used by a single script instance.
+
+shared workers - can be shared by several different scripts running 
+in different windows.
+
+service workers - caching resources so that web applications can 
+work when the user is offline. (key component in Progressive
+Web Apps PWAs)

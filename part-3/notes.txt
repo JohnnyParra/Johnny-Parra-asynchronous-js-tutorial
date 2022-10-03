@@ -1,0 +1,1 @@
+setTimeout() method is an API.
